@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Bright Capital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bc-navy': '#253B80', 'bc-blue': '#169BD7', 'bc-teal': '#00BCD4',
+            'bc-dark': '#1A2450', 'bc-heading': '#3C3950', 'bc-body': '#5F727F',
+            'bc-light': '#F4F6F7', 'bc-lighter': '#F0F3F2', 'bc-border': '#DFE5E8',
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Source Sans 3', 'Source Sans Pro', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #F4F6F7; color: #5F727F; }
+    .btn-navy { background: #253B80; color: #fff; transition: background 0.25s ease, transform 0.15s ease; }
+    .btn-navy:hover { background: #1A2450; } .btn-navy:active { transform: scale(0.98); }
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.in { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/97 backdrop-blur-md border-b border-bc-border shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-bc-navy flex items-center justify-center shrink-0"><span class="text-white text-[11px] font-heading font-bold tracking-widest">BC</span></div>
+      <span class="font-heading font-bold text-bc-heading text-[15px] uppercase tracking-[0.06em]">Bright Capital</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="operators.html" class="font-heading font-bold text-bc-body hover:text-bc-navy text-[12px] uppercase tracking-[0.1em] transition-colors duration-200">For Operators</a>
+      <a href="deals.html" class="font-heading font-bold text-bc-body hover:text-bc-navy text-[12px] uppercase tracking-[0.1em] transition-colors duration-200">Deals</a>
+      <a href="about.html" class="font-heading font-bold text-bc-navy text-[12px] uppercase tracking-[0.1em]">About</a>
+      <a href="contact.html" class="btn-navy ml-2 px-6 py-3 font-heading font-bold text-[12px] uppercase tracking-[0.1em] active:scale-95">Book a Call</a>
+    </div>
+    <button id="menuBtn" class="md:hidden text-bc-body hover:text-bc-navy p-1.5">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 22 22"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-bc-border bg-white px-6 py-5 flex-col gap-4">
+    <a href="operators.html" class="block font-heading font-bold text-bc-body text-sm uppercase tracking-wide py-1">For Operators</a>
+    <a href="deals.html" class="block font-heading font-bold text-bc-body text-sm uppercase tracking-wide py-1">Deals</a>
+    <a href="about.html" class="block font-heading font-bold text-bc-navy text-sm uppercase tracking-wide py-1">About</a>
+    <a href="contact.html" class="block font-heading font-bold text-bc-navy text-sm uppercase tracking-wide py-1">Book a Call →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative pt-36 pb-20 bg-bc-navy overflow-hidden border-b border-bc-border">
+  <div class="absolute inset-0">
+    <img src="../brand_assets/Exterior/Courtyard 5.jpg" alt="" class="w-full h-full object-cover" style="opacity:0.14; filter: brightness(0.7) saturate(0.5);">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(37,59,128,0.95) 0%, rgba(37,59,128,0.9) 100%);"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-10">
+    <div class="max-w-2xl">
+      <div class="flex items-center gap-3 mb-6"><div class="h-0.5 w-7 bg-bc-teal flex-shrink-0"></div><p class="font-heading font-bold text-bc-teal text-[11px] uppercase tracking-[0.25em]">About Bright Capital</p></div>
+      <h1 class="font-heading font-extrabold text-white text-5xl md:text-[58px] leading-[1.06] uppercase tracking-tight mb-6">
+        Built on Conviction.<br/>Driven by Pipeline.
+      </h1>
+      <p class="text-white/65 text-[17px] leading-[1.75]">
+        Bright Capital was founded on a single belief: the most valuable thing you can bring to a multifamily deal is a deal worth doing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="py-24 bg-white border-b border-bc-border">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+      <div class="fade-up">
+        <div class="flex items-center gap-3 mb-5"><div class="h-0.5 w-7 bg-bc-blue flex-shrink-0"></div><p class="font-heading font-bold text-bc-blue text-[11px] uppercase tracking-[0.25em]">The Story</p></div>
+        <h2 class="font-heading font-extrabold text-bc-heading text-4xl md:text-[38px] leading-tight uppercase tracking-tight mb-7">
+          From Learning the<br/>Business to Building<br/>the Platform.
+        </h2>
+        <div class="space-y-5 text-bc-body text-[16px] leading-[1.8]">
+          <p>I spent time working alongside operators and investors in the multifamily space — watching how deals got sourced, structured, and closed. That experience made one thing clear: the operators who scale aren't necessarily the best operators. They're the ones who never run out of deals to look at.</p>
+          <p>I built Bright Capital to fill that gap — not as a fund, not as a broker, but as a deal sourcing and underwriting partner for operators who are ready to grow but don't have the infrastructure to prospect at scale.</p>
+          <p>My focus is Texas and the broader Sunbelt. These are markets I know — where I've sourced, underwritten, and closed alongside capital partners. The pipeline is active. The relationships are real. And the model is simple: I find the deal, you close it, we win together.</p>
+          <p>Bright Capital's first closed deal, The Jackson in Lubbock, TX, is the proof of concept. 86 units, a deep value entry, and a clear value-add thesis — sourced, underwritten, and delivered. That's what we do, and we're just getting started.</p>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay: 0.15s">
+        <div class="relative mb-5">
+          <img src="../brand_assets/Exterior/Courtyard 6.jpg" alt="" class="w-full h-64 object-cover" style="filter: brightness(0.8) contrast(1.05) saturate(0.85);">
+          <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(37,59,128,0.15) 0%, transparent 60%);"></div>
+        </div>
+        <div class="grid grid-cols-2 gap-0 border border-bc-border">
+          <div class="p-6 border-r border-b border-bc-border bg-white">
+            <p class="font-heading font-extrabold text-bc-navy text-[26px] mb-1">$4M</p>
+            <p class="font-heading font-bold text-bc-body text-[11px] uppercase tracking-wide">Current AUM</p>
+          </div>
+          <div class="p-6 border-b border-bc-border bg-white">
+            <p class="font-heading font-extrabold text-bc-navy text-[26px] mb-1">86</p>
+            <p class="font-heading font-bold text-bc-body text-[11px] uppercase tracking-wide">Units Owned</p>
+          </div>
+          <div class="p-6 border-r border-bc-border bg-white">
+            <p class="font-heading font-extrabold text-bc-navy text-[26px] mb-1">$150M</p>
+            <p class="font-heading font-bold text-bc-body text-[11px] uppercase tracking-wide">Active Pipeline</p>
+          </div>
+          <div class="p-6 bg-bc-navy">
+            <p class="font-heading font-extrabold text-white text-[26px] mb-1">$100M</p>
+            <p class="font-heading font-bold text-white/60 text-[11px] uppercase tracking-wide">AUM Target 2028</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="py-24 bg-bc-light border-b border-bc-border">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="max-w-xl mb-14 fade-up">
+      <div class="flex items-center gap-3 mb-5"><div class="h-0.5 w-7 bg-bc-blue flex-shrink-0"></div><p class="font-heading font-bold text-bc-blue text-[11px] uppercase tracking-[0.25em]">How We Operate</p></div>
+      <h2 class="font-heading font-extrabold text-bc-heading text-4xl md:text-[38px] leading-tight uppercase tracking-tight">The Principles Behind<br/>Every Deal We Bring.</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="p-8 bg-white border border-bc-border hover:border-bc-blue hover:shadow-md transition-all duration-300 fade-up">
+        <div class="h-0.5 w-10 bg-bc-navy mb-5"></div>
+        <h3 class="font-heading font-bold text-bc-navy text-[14px] uppercase tracking-[0.08em] mb-3">Quality Over Volume</h3>
+        <p class="text-bc-body text-[15px] leading-relaxed">We don't flood your inbox with questionable deals to look active. Every opportunity we send has passed a strict internal filter. Your time is too valuable for anything less.</p>
+      </div>
+      <div class="p-8 bg-white border border-bc-border hover:border-bc-blue hover:shadow-md transition-all duration-300 fade-up" style="transition-delay: 0.1s">
+        <div class="h-0.5 w-10 bg-bc-blue mb-5"></div>
+        <h3 class="font-heading font-bold text-bc-navy text-[14px] uppercase tracking-[0.08em] mb-3">Skin in the Game</h3>
+        <p class="text-bc-body text-[15px] leading-relaxed">We take GP equity in every deal we bring. That's not a formality — it means we're underwriting with our own money on the line. If the deal doesn't work, neither do we.</p>
+      </div>
+      <div class="p-8 bg-white border border-bc-border hover:border-bc-blue hover:shadow-md transition-all duration-300 fade-up">
+        <div class="h-0.5 w-10 bg-bc-teal mb-5"></div>
+        <h3 class="font-heading font-bold text-bc-navy text-[14px] uppercase tracking-[0.08em] mb-3">Operator-First Mindset</h3>
+        <p class="text-bc-body text-[15px] leading-relaxed">We're not here to compete with operators. We're here to support them. Our job is to make the operator's job easier by removing the sourcing burden so you can focus on execution.</p>
+      </div>
+      <div class="p-8 bg-white border border-bc-border hover:border-bc-blue hover:shadow-md transition-all duration-300 fade-up" style="transition-delay: 0.1s">
+        <div class="h-0.5 w-10 bg-bc-navy mb-5"></div>
+        <h3 class="font-heading font-bold text-bc-navy text-[14px] uppercase tracking-[0.08em] mb-3">Texas &amp; Sunbelt Depth</h3>
+        <p class="text-bc-body text-[15px] leading-relaxed">We don't try to cover every market. We go deep in the geographies we know — where our relationships are strongest and we can identify opportunities before they're broadly marketed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JACKSON DEAL -->
+<section class="py-24 bg-white border-b border-bc-border">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="flex items-center gap-3 mb-10 fade-up"><div class="h-0.5 w-7 bg-bc-blue flex-shrink-0"></div><p class="font-heading font-bold text-bc-blue text-[11px] uppercase tracking-[0.25em]">First Closed Deal</p></div>
+    <div class="grid md:grid-cols-5 gap-0 border border-bc-border overflow-hidden fade-up">
+      <div class="md:col-span-3 relative overflow-hidden">
+        <img src="../brand_assets/Exterior/East Side.jpg" alt="The Jackson" class="w-full h-full min-h-[320px] object-cover" style="filter: brightness(0.78) contrast(1.05) saturate(0.85);">
+        <div class="absolute inset-0" style="background: linear-gradient(to right, transparent 40%, rgba(37,59,128,0.3) 100%);"></div>
+      </div>
+      <div class="md:col-span-2 p-10 bg-bc-light flex flex-col justify-center">
+        <h3 class="font-heading font-extrabold text-bc-heading text-[32px] leading-tight tracking-tight mb-1">The Jackson</h3>
+        <p class="text-bc-body text-[16px] mb-7">Lubbock, Texas</p>
+        <div class="space-y-3 mb-7">
+          <div class="flex justify-between border-b border-bc-border pb-2.5"><span class="font-heading font-bold text-bc-body text-[12px] uppercase tracking-wide">Units</span><span class="font-heading font-bold text-bc-heading text-[15px]">86</span></div>
+          <div class="flex justify-between border-b border-bc-border pb-2.5"><span class="font-heading font-bold text-bc-body text-[12px] uppercase tracking-wide">Partner</span><span class="font-heading font-bold text-bc-heading text-[13px]">Ocean Ridge Capital</span></div>
+          <div class="flex justify-between border-b border-bc-border pb-2.5"><span class="font-heading font-bold text-bc-body text-[12px] uppercase tracking-wide">Target Return</span><span class="font-heading font-bold text-bc-navy text-[15px]">19% Ann.</span></div>
+          <div class="flex justify-between border-b border-bc-border pb-2.5"><span class="font-heading font-bold text-bc-body text-[12px] uppercase tracking-wide">Equity Multiple</span><span class="font-heading font-bold text-bc-navy text-[15px]">2.3x</span></div>
+          <div class="flex justify-between"><span class="font-heading font-bold text-bc-body text-[12px] uppercase tracking-wide">Strategy</span><span class="font-heading font-bold text-bc-heading text-[13px]">Value-Add / Refi</span></div>
+        </div>
+        <a href="deals.html" class="font-heading font-bold text-bc-blue text-[13px] uppercase tracking-[0.08em] hover:text-bc-navy transition-colors duration-200">View Deal Details →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-bc-navy">
+  <div class="max-w-3xl mx-auto px-6 text-center fade-up">
+    <h2 class="font-heading font-extrabold text-white text-4xl md:text-[44px] leading-tight uppercase tracking-tight mb-6">We're Building Something Serious.<br/>Come Be Part of It.</h2>
+    <p class="text-white/65 text-[16px] leading-[1.75] max-w-lg mx-auto mb-10">If you're an operator looking for a deal flow partner, let's connect.</p>
+    <a href="contact.html" class="inline-flex items-center justify-center px-10 py-4 bg-bc-blue text-white font-heading font-bold text-[12px] uppercase tracking-[0.12em] hover:bg-bc-teal transition-colors duration-300 active:scale-95">Book a Strategy Call</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 bg-bc-dark">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3"><div class="w-8 h-8 border border-white/30 flex items-center justify-center"><span class="font-heading font-bold text-white text-[10px] tracking-widest">BC</span></div><span class="font-heading font-bold text-white text-sm uppercase tracking-[0.06em]">Bright Capital</span></div>
+    <nav class="flex gap-8">
+      <a href="operators.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">For Operators</a>
+      <a href="deals.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">Deals</a>
+      <a href="about.html" class="font-heading font-bold text-white text-[11px] uppercase tracking-[0.08em]">About</a>
+      <a href="contact.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">Contact</a>
+    </nav>
+    <p class="text-white/30 text-[11px] tracking-wide">© 2025 Bright Capital. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => { const m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); m.classList.toggle('flex'); });
+  const obs = new IntersectionObserver((e) => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in'); }), { rootMargin: '10000px', threshold: 0 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

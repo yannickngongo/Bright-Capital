@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Capital — Multifamily Deal Flow for Operators</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bc-navy': '#253B80',
+            'bc-blue': '#169BD7',
+            'bc-teal': '#00BCD4',
+            'bc-dark': '#1A2450',
+            'bc-heading': '#3C3950',
+            'bc-body': '#5F727F',
+            'bc-light': '#F4F6F7',
+            'bc-lighter': '#F0F3F2',
+            'bc-border': '#DFE5E8',
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Source Sans 3', 'Source Sans Pro', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #F4F6F7; color: #5F727F; }
+    .btn-navy { background: #253B80; color: #fff; transition: background 0.25s ease, transform 0.15s ease; }
+    .btn-navy:hover { background: #1A2450; }
+    .btn-navy:active { transform: scale(0.98); }
+    .btn-blue-outline { border: 2px solid #169BD7; color: #169BD7; background: transparent; transition: all 0.25s ease; }
+    .btn-blue-outline:hover { background: #169BD7; color: #fff; }
+    .btn-blue { background: #169BD7; color: #fff; transition: background 0.25s ease, transform 0.15s ease; }
+    .btn-blue:hover { background: #1286B8; }
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.in { opacity: 1; transform: translateY(0); }
+    .eyebrow { display: flex; align-items: center; gap: 12px; }
+    .eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: #169BD7; flex-shrink: 0; }
+  </style>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/97 backdrop-blur-md border-b border-bc-border shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-bc-navy flex items-center justify-center shrink-0">
+        <span class="text-white text-[11px] font-heading font-bold tracking-widest">BC</span>
+      </div>
+      <span class="font-heading font-bold text-bc-heading text-[15px] uppercase tracking-[0.06em]">Bright Capital</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="operators.html" class="font-heading font-bold text-bc-body hover:text-bc-navy text-[12px] uppercase tracking-[0.1em] transition-colors duration-200">For Operators</a>
+      <a href="deals.html" class="font-heading font-bold text-bc-body hover:text-bc-navy text-[12px] uppercase tracking-[0.1em] transition-colors duration-200">Deals</a>
+      <a href="about.html" class="font-heading font-bold text-bc-body hover:text-bc-navy text-[12px] uppercase tracking-[0.1em] transition-colors duration-200">About</a>
+      <a href="contact.html" class="btn-navy ml-2 px-6 py-3 font-heading font-bold text-[12px] uppercase tracking-[0.1em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-bc-navy active:scale-95">Book a Call</a>
+    </div>
+    <button id="menuBtn" class="md:hidden text-bc-body hover:text-bc-navy p-1.5 transition-colors duration-200">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 22 22"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-bc-border bg-white px-6 py-5 flex-col gap-4">
+    <a href="operators.html" class="block font-heading font-bold text-bc-body hover:text-bc-navy text-sm uppercase tracking-wide py-1">For Operators</a>
+    <a href="deals.html" class="block font-heading font-bold text-bc-body hover:text-bc-navy text-sm uppercase tracking-wide py-1">Deals</a>
+    <a href="about.html" class="block font-heading font-bold text-bc-body hover:text-bc-navy text-sm uppercase tracking-wide py-1">About</a>
+    <a href="contact.html" class="block font-heading font-bold text-bc-navy text-sm uppercase tracking-wide py-1">Book a Call →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="../brand_assets/multifamily-real-estate.jpg" alt="" class="w-full h-full object-cover">
+    <div class="absolute inset-0" style="background: linear-gradient(105deg, rgba(37,59,128,0.95) 0%, rgba(37,59,128,0.85) 40%, rgba(22,155,215,0.55) 100%);"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-32" style="background: linear-gradient(to bottom, transparent, rgba(37,59,128,0.25));"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-10 w-full py-32 pt-40">
+    <div class="max-w-3xl">
+      <div class="flex items-center gap-3 mb-7">
+        <div class="h-0.5 w-10 bg-bc-teal"></div>
+        <p class="font-heading font-bold text-bc-teal text-[11px] uppercase tracking-[0.3em]">Multifamily Deal Sourcing · Texas &amp; Sunbelt</p>
+      </div>
+      <h1 class="font-heading font-extrabold text-white text-5xl md:text-[65px] leading-[1.04] uppercase tracking-tight mb-8">
+        Your Next Deal<br/>Is Already<br/>Waiting.
+      </h1>
+      <p class="text-white/75 text-[17px] leading-[1.75] max-w-[500px] mb-12">
+        Bright Capital sources, underwrites, and delivers vetted multifamily opportunities directly to operators ready to scale — so you can stop hunting and start closing.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="contact.html" class="btn-navy inline-flex items-center justify-center px-8 py-4 font-heading font-bold text-[12px] uppercase tracking-[0.12em]">
+          Book a Strategy Call
+        </a>
+        <a href="operators.html" class="btn-blue-outline inline-flex items-center justify-center px-8 py-4 font-heading font-bold text-[12px] uppercase tracking-[0.12em]">
+          How We Partner →
+        </a>
+      </div>
+    </div>
+    <!-- Stats -->
+    <div class="mt-20 pt-8 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-0">
+      <div class="pr-8 py-3">
+        <p class="font-heading font-extrabold text-white text-[30px] leading-tight mb-1">$4M+</p>
+        <p class="font-heading font-bold text-white/50 text-[11px] uppercase tracking-[0.08em]">Assets Under Management</p>
+      </div>
+      <div class="px-8 py-3 border-l border-white/20">
+        <p class="font-heading font-extrabold text-white text-[30px] leading-tight mb-1">$150M</p>
+        <p class="font-heading font-bold text-white/50 text-[11px] uppercase tracking-[0.08em]">Active Deal Pipeline</p>
+      </div>
+      <div class="px-8 py-3 border-l border-white/20">
+        <p class="font-heading font-extrabold text-white text-[30px] leading-tight mb-1">Texas</p>
+        <p class="font-heading font-bold text-white/50 text-[11px] uppercase tracking-[0.08em]">&amp; Sunbelt Focus</p>
+      </div>
+      <div class="px-8 py-3 border-l border-white/20">
+        <p class="font-heading font-extrabold text-white text-[30px] leading-tight mb-1">Co-GP</p>
+        <p class="font-heading font-bold text-white/50 text-[11px] uppercase tracking-[0.08em]">Partnership Model</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="py-24 bg-white border-b border-bc-border">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+      <div class="fade-up">
+        <p class="eyebrow font-heading font-bold text-bc-blue text-[11px] uppercase tracking-[0.25em] mb-5">What We Do</p>
+        <h2 class="font-heading font-extrabold text-bc-heading text-4xl md:text-[38px] leading-tight uppercase tracking-tight mb-6">
+          We Do the Heavy<br/>Lifting. You Execute.
+        </h2>
+        <p class="text-bc-body text-[16px] leading-[1.75] mb-5">
+          Most operators have the skills, systems, and investor relationships to run deals at scale. What they lack is a consistent, reliable source of qualified deal flow.
+        </p>
+        <p class="text-bc-body text-[16px] leading-[1.75] mb-9">
+          Bright Capital operates as your dedicated acquisition arm — sourcing off-market opportunities, stress-testing the numbers, and delivering deals that are ready to evaluate.
+        </p>
+        <a href="operators.html" class="font-heading font-bold text-bc-blue text-[13px] uppercase tracking-[0.1em] hover:text-bc-navy transition-colors duration-200">
+          See how the partnership works →
+        </a>
+      </div>
+      <div class="space-y-1.5 fade-up" style="transition-delay: 0.15s">
+        <div class="flex gap-5 p-7 border-l-4 border-bc-navy bg-bc-light hover:bg-white hover:shadow-md transition-all duration-300">
+          <span class="font-heading font-extrabold text-bc-navy text-2xl shrink-0 leading-none mt-0.5">01</span>
+          <div>
+            <h3 class="font-heading font-bold text-bc-heading text-[13px] uppercase tracking-[0.08em] mb-2">Source & Identify</h3>
+            <p class="text-bc-body text-[14px] leading-relaxed">Direct outreach, broker relationships, and off-market channels to surface deals before they hit the market.</p>
+          </div>
+        </div>
+        <div class="flex gap-5 p-7 border-l-4 border-bc-blue bg-bc-light hover:bg-white hover:shadow-md transition-all duration-300">
+          <span class="font-heading font-extrabold text-bc-blue text-2xl shrink-0 leading-none mt-0.5">02</span>
+          <div>
+            <h3 class="font-heading font-bold text-bc-heading text-[13px] uppercase tracking-[0.08em] mb-2">Underwrite & Vet</h3>
+            <p class="text-bc-body text-[14px] leading-relaxed">Every deal is stress-tested — submarket analysis, rent comps, structure, exit assumptions — before it reaches you.</p>
+          </div>
+        </div>
+        <div class="flex gap-5 p-7 border-l-4 border-bc-teal bg-bc-light hover:bg-white hover:shadow-md transition-all duration-300">
+          <span class="font-heading font-extrabold text-bc-teal text-2xl shrink-0 leading-none mt-0.5">03</span>
+          <div>
+            <h3 class="font-heading font-bold text-bc-heading text-[13px] uppercase tracking-[0.08em] mb-2">Deliver & Partner</h3>
+            <p class="text-bc-body text-[14px] leading-relaxed">We present the deal, align on structure, and partner as co-GP through close. You operate. We source the next one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE WORK WITH -->
+<section class="py-24 bg-bc-light border-b border-bc-border">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="max-w-2xl mb-14 fade-up">
+      <p class="eyebrow font-heading font-bold text-bc-blue text-[11px] uppercase tracking-[0.25em] mb-5">Who We Work With</p>
+      <h2 class="font-heading font-extrabold text-bc-heading text-4xl md:text-[38px] leading-tight uppercase tracking-tight">
+        Built for Operators<br/>Who Are Ready to Move.
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="p-8 bg-white border border-bc-border hover:border-bc-blue hover:shadow-lg transition-all duration-300 group fade-up">
+        <div class="w-12 h-12 bg-bc-light group-hover:bg-bc-navy flex items-center justify-center mb-6 transition-colors duration-300">
+          <svg class="w-5 h-5 text-bc-navy group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-bc-heading text-[13px] uppercase tracking-[0.08em] mb-3">100–800 Unit Operators</h3>
+        <p class="text-bc-body text-[14px] leading-relaxed">You've closed deals. You have operations dialed in. You need a steady pipeline without building a full acquisitions team.</p>
+      </div>
+      <div class="p-8 bg-white border border-bc-border hover:border-bc-blue hover:shadow-lg transition-all duration-300 group fade-up" style="transition-delay: 0.1s">
+        <div class="w-12 h-12 bg-bc-light group-hover:bg-bc-navy flex items-center justify-center mb-6 transition-colors duration-300">
+          <svg class="w-5 h-5 text-bc-navy group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-bc-heading text-[13px] uppercase tracking-[0.08em] mb-3">Lean Teams</h3>
+        <p class="text-bc-body text-[14px] leading-relaxed">Your payroll stays tight. You need a partner who brings the deal flow without adding overhead to your operation.</p>
+      </div>
+      <div class="p-8 bg-white border border-bc-border hover:border-bc-blue hover:shadow-lg transition-all duration-300 group fade-up" style="transition-delay: 0.2s">
+        <div class="w-12 h-12 bg-bc-light group-hover:bg-bc-navy flex items-center justify-center mb-6 transition-colors duration-300">
+          <svg class="w-5 h-5 text-bc-navy group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-bc-heading text-[13px] uppercase tracking-[0.08em] mb-3">Texas &amp; Sunbelt Focused</h3>
+        <p class="text-bc-body text-[14px] leading-relaxed">Active in high-growth markets. You understand the dynamics and can move decisively when the right deal surfaces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS — DARK NAVY -->
+<section class="py-24 bg-bc-navy overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="relative fade-up">
+        <img src="../brand_assets/Exterior/Courtyard 3.jpg" alt="The Jackson" class="w-full h-[460px] object-cover" style="filter: brightness(0.8) contrast(1.05) saturate(0.85);">
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(37,59,128,0.75) 0%, transparent 55%);"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-5 bg-bc-dark/90 border-t border-white/10">
+          <p class="font-heading font-bold text-bc-teal text-[10px] uppercase tracking-[0.2em] mb-1.5">Active Partnership</p>
+          <p class="font-heading font-bold text-white text-[15px]">The Jackson — Lubbock, TX</p>
+          <div class="flex flex-wrap gap-3 mt-2">
+            <span class="text-white/55 text-[12px]">86 Units</span>
+            <span class="text-white/25">·</span>
+            <span class="text-white/55 text-[12px]">Ocean Ridge Capital</span>
+            <span class="text-white/25">·</span>
+            <span class="text-bc-teal text-[12px] font-semibold">19% Target Return</span>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay: 0.15s">
+        <div class="flex items-center gap-3 mb-5"><div class="h-0.5 w-7 bg-bc-teal flex-shrink-0"></div><p class="font-heading font-bold text-bc-teal text-[11px] uppercase tracking-[0.25em]">Why It Matters</p></div>
+        <h2 class="font-heading font-extrabold text-white text-4xl md:text-[38px] leading-tight uppercase tracking-tight mb-6">
+          Deal Flow Is the<br/>Only Bottleneck<br/>That Actually Matters.
+        </h2>
+        <p class="text-white/65 text-[16px] leading-[1.75] mb-5">
+          Operators don't fail because they can't close. They stall because they can't find enough qualified opportunities. Building a sourcing operation takes time and capital you'd rather deploy elsewhere.
+        </p>
+        <p class="text-white/65 text-[16px] leading-[1.75] mb-10">
+          Bright Capital was built to close that gap — giving operators the pipeline infrastructure they need without the full cost of an in-house acquisitions team.
+        </p>
+        <a href="contact.html" class="btn-blue inline-flex items-center px-8 py-4 font-heading font-bold text-[12px] uppercase tracking-[0.12em]">
+          Let's Talk →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="py-24 bg-white border-t border-bc-border">
+  <div class="max-w-3xl mx-auto px-6 text-center fade-up">
+    <div class="flex items-center gap-3 justify-center mb-5">
+      <div class="h-0.5 w-7 bg-bc-blue flex-shrink-0"></div>
+      <p class="font-heading font-bold text-bc-blue text-[11px] uppercase tracking-[0.25em]">Ready to Scale?</p>
+      <div class="h-0.5 w-7 bg-bc-blue flex-shrink-0"></div>
+    </div>
+    <h2 class="font-heading font-extrabold text-bc-heading text-4xl md:text-[42px] leading-tight uppercase tracking-tight mb-6">
+      If You Can Close,<br/>We'll Find the Deal.
+    </h2>
+    <p class="text-bc-body text-[16px] leading-[1.75] max-w-lg mx-auto mb-10">
+      We're selective about who we partner with. If you're an experienced operator with the infrastructure to execute, let's have a direct conversation.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="btn-navy inline-flex items-center justify-center px-10 py-4 font-heading font-bold text-[12px] uppercase tracking-[0.12em]">Book a Strategy Call</a>
+      <a href="operators.html" class="btn-blue-outline inline-flex items-center justify-center px-10 py-4 font-heading font-bold text-[12px] uppercase tracking-[0.12em]">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 bg-bc-navy">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 border border-white/30 flex items-center justify-center">
+        <span class="font-heading font-bold text-white text-[10px] tracking-widest">BC</span>
+      </div>
+      <span class="font-heading font-bold text-white text-sm uppercase tracking-[0.06em]">Bright Capital</span>
+    </div>
+    <nav class="flex gap-8">
+      <a href="operators.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">For Operators</a>
+      <a href="deals.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">Deals</a>
+      <a href="about.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">About</a>
+      <a href="contact.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">Contact</a>
+    </nav>
+    <p class="text-white/30 text-[11px] tracking-wide">© 2025 Bright Capital. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => { const m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); m.classList.toggle('flex'); });
+  const obs = new IntersectionObserver((e) => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in'); }), { rootMargin: '10000px', threshold: 0 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

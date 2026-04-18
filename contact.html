@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Call — Bright Capital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bc-navy': '#253B80', 'bc-blue': '#169BD7', 'bc-teal': '#00BCD4',
+            'bc-dark': '#1A2450', 'bc-heading': '#3C3950', 'bc-body': '#5F727F',
+            'bc-light': '#F4F6F7', 'bc-lighter': '#F0F3F2', 'bc-border': '#DFE5E8',
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Source Sans 3', 'Source Sans Pro', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #F4F6F7; color: #5F727F; }
+    .btn-navy { background: #253B80; color: #fff; transition: background 0.25s ease, transform 0.15s ease; }
+    .btn-navy:hover { background: #1A2450; } .btn-navy:active { transform: scale(0.98); }
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.in { opacity: 1; transform: translateY(0); }
+    input, textarea, select {
+      background: #fff; border: 1px solid #DFE5E8; color: #3C3950;
+      padding: 13px 15px; width: 100%; font-size: 15px; font-family: 'Source Sans 3', sans-serif;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease; outline: none; appearance: none;
+    }
+    input:focus, textarea:focus, select:focus { border-color: #169BD7; box-shadow: 0 0 0 3px rgba(22,155,215,0.1); }
+    input::placeholder, textarea::placeholder { color: #99A9B5; }
+    select option { background: #fff; color: #3C3950; }
+    label { display: block; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5F727F; margin-bottom: 7px; }
+  </style>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/97 backdrop-blur-md border-b border-bc-border shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-bc-navy flex items-center justify-center shrink-0"><span class="text-white text-[11px] font-heading font-bold tracking-widest">BC</span></div>
+      <span class="font-heading font-bold text-bc-heading text-[15px] uppercase tracking-[0.06em]">Bright Capital</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="operators.html" class="font-heading font-bold text-bc-body hover:text-bc-navy text-[12px] uppercase tracking-[0.1em] transition-colors duration-200">For Operators</a>
+      <a href="deals.html" class="font-heading font-bold text-bc-body hover:text-bc-navy text-[12px] uppercase tracking-[0.1em] transition-colors duration-200">Deals</a>
+      <a href="about.html" class="font-heading font-bold text-bc-body hover:text-bc-navy text-[12px] uppercase tracking-[0.1em] transition-colors duration-200">About</a>
+      <a href="contact.html" class="btn-navy ml-2 px-6 py-3 font-heading font-bold text-[12px] uppercase tracking-[0.1em]">Book a Call</a>
+    </div>
+    <button id="menuBtn" class="md:hidden text-bc-body hover:text-bc-navy p-1.5">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 22 22"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-bc-border bg-white px-6 py-5 flex-col gap-4">
+    <a href="operators.html" class="block font-heading font-bold text-bc-body text-sm uppercase tracking-wide py-1">For Operators</a>
+    <a href="deals.html" class="block font-heading font-bold text-bc-body text-sm uppercase tracking-wide py-1">Deals</a>
+    <a href="about.html" class="block font-heading font-bold text-bc-body text-sm uppercase tracking-wide py-1">About</a>
+    <a href="contact.html" class="block font-heading font-bold text-bc-navy text-sm uppercase tracking-wide py-1">Book a Call →</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<section class="min-h-screen pt-32 pb-20 bg-bc-light">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-16 md:gap-20 items-start">
+
+      <!-- LEFT -->
+      <div class="fade-up">
+        <div class="flex items-center gap-3 mb-6"><div class="h-0.5 w-7 bg-bc-blue flex-shrink-0"></div><p class="font-heading font-bold text-bc-blue text-[11px] uppercase tracking-[0.25em]">Book a Strategy Call</p></div>
+        <h1 class="font-heading font-extrabold text-bc-heading text-4xl md:text-[50px] leading-[1.08] uppercase tracking-tight mb-7">
+          Let's Talk About<br/>Your Next Deal.
+        </h1>
+        <p class="text-bc-body text-[16px] leading-[1.8] mb-6">
+          This isn't a sales call. It's a 30-minute strategy conversation — we learn about your acquisition criteria, your current pipeline, and where the gaps are. If there's a fit, we discuss what a partnership looks like.
+        </p>
+        <p class="text-bc-body text-[16px] leading-[1.8] mb-10">
+          We're selective. We only partner with operators who have the infrastructure to close. If that's you, we want to hear from you.
+        </p>
+
+        <div class="border border-bc-border bg-white divide-y divide-bc-border mb-8">
+          <div class="flex items-start gap-4 p-5">
+            <div class="w-7 h-7 bg-bc-navy flex items-center justify-center shrink-0 mt-0.5"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+            <div><p class="font-heading font-bold text-bc-heading text-[14px] mb-0.5">30 minutes</p><p class="text-bc-body text-[13px]">Focused conversation, no fluff. We respect your time.</p></div>
+          </div>
+          <div class="flex items-start gap-4 p-5">
+            <div class="w-7 h-7 bg-bc-navy flex items-center justify-center shrink-0 mt-0.5"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+            <div><p class="font-heading font-bold text-bc-heading text-[14px] mb-0.5">Criteria alignment</p><p class="text-bc-body text-[13px]">We match our deal flow to your exact acquisition parameters.</p></div>
+          </div>
+          <div class="flex items-start gap-4 p-5">
+            <div class="w-7 h-7 bg-bc-navy flex items-center justify-center shrink-0 mt-0.5"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+            <div><p class="font-heading font-bold text-bc-heading text-[14px] mb-0.5">No pressure</p><p class="text-bc-body text-[13px]">If there's no fit, we'll say so directly. No follow-up spam.</p></div>
+          </div>
+          <div class="flex items-start gap-4 p-5">
+            <div class="w-7 h-7 bg-bc-navy flex items-center justify-center shrink-0 mt-0.5"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+            <div><p class="font-heading font-bold text-bc-heading text-[14px] mb-0.5">Scheduling via Calendly</p><p class="text-bc-body text-[13px]">Pick a time that works. You'll get a confirmation and reminder.</p></div>
+          </div>
+        </div>
+
+        <div class="p-5 bg-white border border-bc-border">
+          <p class="font-heading font-bold text-bc-body text-[11px] uppercase tracking-wide mb-1">Or reach out directly</p>
+          <a href="mailto:yannickngongo14@gmail.com" class="text-bc-blue font-heading font-bold text-[15px] hover:text-bc-navy transition-colors duration-200">yannickngongo14@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="fade-up" style="transition-delay: 0.15s">
+        <div class="p-8 md:p-10 bg-white border border-bc-border shadow-lg">
+          <p class="font-heading font-bold text-bc-heading text-[15px] mb-7 uppercase tracking-[0.04em]">Tell us about your operation</p>
+          <form id="contactForm" class="space-y-5" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-2 gap-4">
+              <div><label for="firstName">First Name</label><input type="text" id="firstName" placeholder="John" required></div>
+              <div><label for="lastName">Last Name</label><input type="text" id="lastName" placeholder="Smith" required></div>
+            </div>
+            <div><label for="email">Email Address</label><input type="email" id="email" placeholder="john@yourcompany.com" required></div>
+            <div><label for="company">Company Name</label><input type="text" id="company" placeholder="Smith Capital Partners"></div>
+            <div>
+              <label for="units">Current Portfolio Size</label>
+              <select id="units">
+                <option value="" disabled selected>Select range</option>
+                <option>0–100 units</option><option>100–300 units</option>
+                <option>300–500 units</option><option>500–800 units</option><option>800+ units</option>
+              </select>
+            </div>
+            <div><label for="markets">Primary Markets</label><input type="text" id="markets" placeholder="Texas, Georgia, Arizona..."></div>
+            <div><label for="message">What are you looking for?</label><textarea id="message" rows="4" placeholder="Brief overview of your acquisition criteria, deal size, and what you're hoping to accomplish..."></textarea></div>
+            <button type="submit" class="btn-navy w-full py-4 font-heading font-bold text-[12px] uppercase tracking-[0.12em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-bc-navy">
+              Book My Strategy Call
+            </button>
+            <p class="text-bc-body text-[12px] text-center leading-relaxed">After submitting, you'll receive a Calendly link to schedule your call within 24 hours.</p>
+          </form>
+          <div id="successMsg" class="hidden text-center py-10">
+            <div class="w-14 h-14 bg-bc-navy flex items-center justify-center mx-auto mb-5">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-heading font-extrabold text-bc-heading text-[22px] uppercase tracking-tight mb-3">Request Received.</h3>
+            <p class="text-bc-body text-[15px] leading-relaxed max-w-xs mx-auto">We'll review your information and send a scheduling link within 24 hours. Talk soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 bg-bc-navy">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3"><div class="w-8 h-8 border border-white/30 flex items-center justify-center"><span class="font-heading font-bold text-white text-[10px] tracking-widest">BC</span></div><span class="font-heading font-bold text-white text-sm uppercase tracking-[0.06em]">Bright Capital</span></div>
+    <nav class="flex gap-8">
+      <a href="operators.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">For Operators</a>
+      <a href="deals.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">Deals</a>
+      <a href="about.html" class="font-heading font-bold text-white/50 hover:text-white text-[11px] uppercase tracking-[0.08em] transition-colors duration-200">About</a>
+      <a href="contact.html" class="font-heading font-bold text-white text-[11px] uppercase tracking-[0.08em]">Contact</a>
+    </nav>
+    <p class="text-white/30 text-[11px] tracking-wide">© 2025 Bright Capital. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => { const m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); m.classList.toggle('flex'); });
+  const obs = new IntersectionObserver((e) => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in'); }), { rootMargin: '10000px', threshold: 0 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  function handleSubmit(e) { e.preventDefault(); document.getElementById('contactForm').classList.add('hidden'); document.getElementById('successMsg').classList.remove('hidden'); }
+</script>
+</body>
+</html>
