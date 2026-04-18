@@ -164,7 +164,40 @@
   document.getElementById('menuBtn').addEventListener('click', () => { const m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); m.classList.toggle('flex'); });
   const obs = new IntersectionObserver((e) => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in'); }), { rootMargin: '10000px', threshold: 0 });
   document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-  function handleSubmit(e) { e.preventDefault(); document.getElementById('contactForm').classList.add('hidden'); document.getElementById('successMsg').classList.remove('hidden'); }
+  const BACKEND_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:3001'
+    : 'https://bright-capital-crm.vercel.app';
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.querySelector('#contactForm [type="submit"]');
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(`${BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: document.getElementById('firstName').value,
+          lastName:  document.getElementById('lastName').value,
+          email:     document.getElementById('email').value,
+          company:   document.getElementById('company').value,
+          units:     document.getElementById('units').value,
+          markets:   document.getElementById('markets').value,
+          message:   document.getElementById('message').value,
+        }),
+      });
+      if (!res.ok) throw new Error('Server error');
+      document.getElementById('contactForm').classList.add('hidden');
+      document.getElementById('successMsg').classList.remove('hidden');
+    } catch {
+      btn.disabled = false;
+      btn.textContent = original;
+      alert('Something went wrong. Please try again or email us directly at yannickngongo14@gmail.com');
+    }
+  }
 </script>
 </body>
 </html>
